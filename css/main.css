@@ -11,7 +11,6 @@
 html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
-    background-color: #000000;
 }
 
 /* Sections
@@ -419,24 +418,24 @@ body {
 /*-----------------------------------------------Оформление навигационного меню---------------------------------------------*/
 .header {
     position: absolute;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1););
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 2;
     width: 100% ;
  }
 .layout--header {
-    padding-top: 35px;
+    padding-top: 53px;
 }
 .logo {
     display: inline-block;
     float: left;
     color: #ff7200;;
     font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
-    line-height: 35px;
-    padding: 0 15px;
+    line-height: 43px;
+    padding: 0 22px;
     box-sizing: border-box;
     border: 1px solid #ffffff;
     -webkit-transition: color 0.5s ease-in-out, background-color 0.6s ease-in-out;
@@ -452,7 +451,7 @@ body {
 .navigation-menu {
     display: block;
     float: left;
-    margin-left: 295px;
+    margin-left: 269px;
     transform: translateY(1.5px);
 }
 .navigation-list {
@@ -468,7 +467,7 @@ body {
 }
 .navigation-list__link {
     display: block;
-    padding: 10px 20px 35px 20px;
+    padding: 13px 25px 38px 25px;
     color: #ffffff;
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 13px;
@@ -569,7 +568,7 @@ body {
     font-family: "Montserrat", Arial, sans-serif;
     font-size: 60px;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: #ffffff;
 }
 .main-slider__text {
@@ -579,11 +578,11 @@ body {
     color: #ffffff;
     font-size: 18px;
     font-weight: 400;
-    line-height: 100px;
+    line-height: 82px;
 }
 .orange-btn {
     display: inline-block;
-    padding: 0 25px;
+    padding: 0 29px;
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 13px;
     font-weight: 400;
@@ -593,18 +592,14 @@ body {
     background-color: #ff7200;
     text-decoration: none;
     color: #ffffff;
-    -webkit-transition: color 0.5s ease, background-color 0.5s ease;
-    -moz-transition: color 0.5s ease,background-color 0.5s ease;
-    -ms-transition: color 0.5s ease, background-color 0.5s ease;
-    -o-transition: color 0.5s ease,background-color 0.5s ease;
-    transition: color 0.5s ease, background-color 0.5s ease;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 .orange-btn:hover {
     color: #ff7200;
     background-color: #fff;
 }
 .main-slider__btn {
-    margin-top: 30px;
+    margin-top: 36px;
 }
 
 .main-slider.slick-dotted.slick-slider {
@@ -614,10 +609,12 @@ body {
     bottom: 50px !important;
 }
 .main-slider .slick-dots li button:before {
-    font-size: 12px;
+    font-size: 16px;
     content: '◼';
     opacity: 0.1;
     color: #000000;
+    top: -7px;
+    left: 16px;
 }
 .main-slider .slick-dots li button:hover:before {
     opacity: 0.6;
@@ -628,15 +625,198 @@ body {
 }
 /*-------------------------------Блок услуги---------------------------------------------------------*/
 
+.service-tab {
+    position: relative;
+    text-decoration: none;
+    float: left;
+    width: 23%;
+    height: 180px;
+    background-color: #eeeeee;
+    margin-right: 30px;
+    transition: background-color 0.4s ease-in-out;
+}
+.service-tab--active,
+.service-tab:hover {
+    background-color: #ff7200;
+}
+.service-tab--active .service-tab__title,
+.service-tab:hover .service-tab__title{
+     color: #ffffff;
+}
+.service-tab:last-child {
+    margin-right: 0;
+}
+.service-tab::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 55px;
+    bottom: 0;
+    background-color: #ffffff;
+    transform: rotate(22deg) translate(-5%,57%);
+}
+.service-tab::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 55px;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff;
+    transform: rotate(-22deg) translate(5%,57%);
+}
+.service-tab__title {
+    text-align: center;
+    color: #444444;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 113px;
+    transition: background 0.4s ease-in-out;
+}
+.service-tab:first-child .service-tab__title::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 36px;
+    background: url("../img/tabs/bull-horn.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.service-tab:nth-child(2) .service-tab__title::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url("../img/tabs/creative.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.service-tab:nth-child(3) .service-tab__title::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url("../img/tabs/startup.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.service-tab:last-child .service-tab__title::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url("../img/tabs/puzzle.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 
-
-
-
-
-
-
-
-
+/*-------------------------------Блок описания услуг---------------------------------------------------*/
+.services-description__wrapper {
+    width: 50%;
+    padding-top: 80px;
+    padding-bottom: 16px;
+}
+.services-description__item {
+    position: relative;
+}
+.services-description__item::after{
+    content: '';
+    position: absolute;
+    top: 21%;
+    right: 74px;
+    background-color: #fff;
+    width: 535px;
+    height: 392px;
+    background: url("../img/tabs/computer.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.block-title {
+    display: inline-block;
+    position: relative;
+    color: #444444;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 84px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+.block-title::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.1;
+}
+.block-title::after {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff7200;
+    opacity: 1;
+}
+.services-description__text {
+    padding-top: 48px;
+    text-align: justify;
+    color: #787878;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.35px;
+}
+.services-description__btn {
+    margin-top: 39px;
+}
+.orange-btn--content-mod{
+    border: 1px solid transparent;
+    transition: border-color 0.5s ease-in-out;
+}
+.orange-btn--content-mod:hover {
+    border-color: #ff7200;
+}
+/*-------------------------------Блок ручная работа---------------------------------------------------*/
+.featured-work {
+    padding-top: 91px;
+}
+.featured-work-wrapper {
+    padding-top: 60px;
+}
+.featured-work__title {
+    font-size: 29px;
+    line-height: 86px;
+}
+.featured-work-slider {
+    width: 40%;
+}
+.featured-work-slider__item {
+    width: 570px;
+    height: 340px;
+    background: url("../img/features/clocks.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
 
 
 
