@@ -681,48 +681,72 @@ body {
     position: absolute;
     width: 40px;
     height: 36px;
-    background: url("../img/tabs/bull-horn.svg");
+    background: url("../img/sprites/bull-horn.svg");
     -webkit-background-size: cover;
     background-size: cover;
     top: 35%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+.service-tab--active.service-tab:first-child>.service-tab__title::before,
+.service-tab:hover.service-tab:first-child>.service-tab__title::before {
+    background: url("../img/sprites/bull-horn_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 .service-tab:nth-child(2) .service-tab__title::before {
     content: '';
     position: absolute;
     width: 40px;
     height: 40px;
-    background: url("../img/tabs/creative.svg");
+    background: url("../img/sprites/creative.svg");
     -webkit-background-size: cover;
     background-size: cover;
     top: 35%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+.service-tab--active.service-tab:nth-child(2)>.service-tab__title::before,
+.service-tab:hover.service-tab:nth-child(2)>.service-tab__title::before {
+    background: url("../img/sprites/creative_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 .service-tab:nth-child(3) .service-tab__title::before {
     content: '';
     position: absolute;
     width: 40px;
     height: 40px;
-    background: url("../img/tabs/startup.svg");
+    background: url("../img/sprites/startup.svg");
     -webkit-background-size: cover;
     background-size: cover;
     top: 35%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
+.service-tab--active.service-tab:nth-child(3)>.service-tab__title::before,
+.service-tab:hover.service-tab:nth-child(3)>.service-tab__title::before {
+    background: url("../img/sprites/startup_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
 .service-tab:last-child .service-tab__title::before {
     content: '';
     position: absolute;
     width: 40px;
     height: 40px;
-    background: url("../img/tabs/puzzle.svg");
+    background: url("../img/sprites/puzzle.svg");
     -webkit-background-size: cover;
     background-size: cover;
     top: 35%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+.service-tab--active.service-tab:last-child>.service-tab__title::before,
+.service-tab:hover.service-tab:last-child>.service-tab__title::before {
+    background: url("../img/sprites/puzzle_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 /*-------------------------------Блок описания услуг---------------------------------------------------*/
@@ -948,10 +972,10 @@ body {
     width: 49% ;
 }
 .about-list__item {
+    position: relative;
     list-style: none;
     margin-bottom: 59px;
 }
-
 .about-list__link {
     display: block;
     text-decoration: none;
@@ -963,14 +987,77 @@ body {
     position: relative;
 
 }
+.about-list__item:first-child::before {
+    content: '';
+    position: absolute;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    background: url("../img/sprites/coffee-cup.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 35%;
+    left: 21px;
+    transform: translate(0,-50%);
+
+}
+.about-list__item:hover:first-child::before {
+    background: url("../img/sprites/coffee-cup_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.about-list__item:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    background: url("../img/sprites/ink.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 41%;
+    left: 21px;
+    transform: translate(0,-24%);
+
+}
+.about-list__item:hover:nth-child(2)::before {
+    background: url("../img/sprites/ink_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.about-list__item:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    background: url("../img/sprites/headphones.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 39%;
+    left: 21px;
+    transform: translate(0,-24%);
+
+}
+.about-list__item:hover:nth-child(3)::before {
+    background: url("../img/sprites/headphones_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.about-list__item:hover .about-list__decoration {
+    background-color: #ff7200;
+}
 .about-list__decoration {
     position: relative;
     width: 100px;
     display: block;
     float: left;
     height: 105px;
-    background-color: #ff7200;
+    background-color: #ffffff;
     margin-right: 25px;
+    transition: background-color 0.4s ease-in-out;
+
 }
 .about-list__decoration::after {
     content: '';
@@ -1244,6 +1331,7 @@ body {
 }
 .progress-list {
     position: absolute;
+    width: 100%;
     top: 50%;
     z-index: 5;
     list-style: none;
@@ -1258,13 +1346,15 @@ body {
 .progress-list__item {
     display: block;
     float: left;
-    margin-right: 50px;
+    margin-right: 17%;
+    box-sizing: border-box;
 }
 .progress-list__item:last-child {
     margin-right: 0;
 }
 .progress-list__number {
     display: block;
+    position: relative;
     color: #ffffff;
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 400;
@@ -1273,6 +1363,33 @@ body {
     letter-spacing: 2.25px;
     padding-bottom: 70px;
 }
+.progress-list__number::after {
+    content: '';
+    position: absolute;
+    width: 31px;
+    height: 30px;
+    bottom: 22px;
+    left: 0;
+    background: url("../img/progress/like.png") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.progress-list__item:nth-child(2) {
+    padding-left: 10px;
+}
+.progress-list__item:nth-child(2)>.progress-list__number::after{
+    background: url("../img/progress/cup.png") center no-repeat;
+}
+.progress-list__item:nth-child(3) {
+    padding-left: 10px;
+}
+.progress-list__item:nth-child(3)>.progress-list__number::after {
+    background: url("../img/progress/social.png") center no-repeat;
+}
+.progress-list__item:nth-child(4)>.progress-list__number::after {
+    background: url("../img/progress/coffee.png") center no-repeat;
+}
+
 .progress-list__title {
     font-size: 13px;
     display: block;
@@ -1283,11 +1400,383 @@ body {
     letter-spacing: 2.25px;
     padding-bottom: 9px;
 }
+/*--------------------------------------------Блок другие услуги--------------------------------------------------------*/
+
+.layout--other-services {
+    padding: 110px 0 32px 0;
+}
+.other-services-title {
+    font-size: 29px;
+    letter-spacing: 1.5px;
+}
+.other-services-list {
+    list-style: none;
+    padding-top: 65px;
+}
+
+.other-services-list:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.other-services-list__item {
+    width: 33%;
+    float: left;
+    margin-bottom: 70px;
+    cursor: pointer;
+}
+
+.other-services-list__title {
+    display: block;
+    position: relative;
+    z-index: 3;
+    color: #444444;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding-left: 82px;
+    padding-bottom: 22px;
+}
+.other-services-list__title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 65px;
+    background-color: #ffffff;
+    transition: background-color 0.4s ease;
+}
+.other-services-list__item:hover>.other-services-list__title::before {
+    background-color: #ff7200;
+}
+.other-services-list__decorate {
+    position: relative;
+}
+.other-services-list__decorate::before {
+    position: absolute;
+    z-index: 0;
+    content: '';
+    width: 50px;
+    height: 20px;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    transform: translate(-80%,-86%) rotate(70deg);
+}
+
+.other-services-list__decorate::after {
+    position: absolute;
+    z-index: 0;
+    content: '';
+    width: 50px;
+    height: 20px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transform: translate(-80%,124%) rotate(-70deg);
+}
+.other-services-list__item:first-child>.other-services-list__title::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url("../img/sprites/flask.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 15%;
+    left: 11px;
+    z-index: 5;
+    transition: background 0.4s ease;
+}
+.other-services-list__item:hover:first-child>.other-services-list__title::after {
+    background: url("../img/sprites/flask_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.other-services-list__item:nth-child(2)>.other-services-list__title::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url("../img/sprites/layers.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 17%;
+    left: 13px;
+    z-index: 5;
+    transition: background 0.4s ease;
+}
+.other-services-list__item:hover:nth-child(2)>.other-services-list__title::after {
+    background: url("../img/sprites/layers_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.other-services-list__item:nth-child(3)>.other-services-list__title::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url("../img/sprites/video-camera.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 18%;
+    left: 14px;
+    z-index: 5;
+    transition: background 0.4s ease;
+}
+.other-services-list__item:hover:nth-child(3)>.other-services-list__title::after {
+    background: url("../img/sprites/video-camera_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.other-services-list__item:nth-child(4)>.other-services-list__title::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url("../img/sprites/startup.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 18%;
+    left: 14px;
+    z-index: 5;
+    transition: background 0.4s ease;
+}
+.other-services-list__item:hover:nth-child(4)>.other-services-list__title::after {
+    background: url("../img/sprites/startup_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.other-services-list__item:nth-child(5)>.other-services-list__title::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url("../img/sprites/photo-camera.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 18%;
+    left: 14px;
+    z-index: 5;
+    transition: background 0.4s ease;
+}
+.other-services-list__item:hover:nth-child(5)>.other-services-list__title::after {
+    background: url("../img/sprites/photo-camera_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.other-services-list__item:nth-child(6)>.other-services-list__title::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url("../img/sprites/file.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 18%;
+    left: 14px;
+    z-index: 5;
+    transition: background 0.4s ease;
+}
+.other-services-list__item:hover:nth-child(6)>.other-services-list__title::after {
+    background: url("../img/sprites/file_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.other-services-list__name {
+    position: relative;
+    z-index: 10;
+}
+.other-services-list__text {
+    color: #787878;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.35px;
+    box-sizing: border-box;
+    padding-right: 50px;
+}
+/*--------------------------------------------Блок наша команда--------------------------------------------------------*/
+.team-block-title {
+    font-size: 29px;
+    letter-spacing: 1.5px;
+}
+.team-block-list {
+    width: 100%;
+    list-style: none;
+    padding-top: 60px;
+}
+.team-block-list:after {
+    display: table;
+    clear: both;
+    content: '';
+}
+.team-block-list__item {
+    position: relative;
+    width: 23%;
+    box-sizing: border-box;
+    margin-right: 31px;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+.team-block-list__item img {
+    width: 100%;
+    height: auto;
+}
+.team-block-list__item:last-child {
+    margin-right: 0;
+}
+
+.team-block-list__hover-box {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 230px;
+    height: 154px;
+    background-color: rgba(255, 114, 0, 0.8);
+    padding: 14px 20px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease-in-out;
+}
+.team-block-list__item:hover>.team-block-list__hover-box {
+    opacity: 1;
+}
+.team-block-list__name,
+.team-block-list__subtitle {
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: "Montserrat", Arial, sans-serif;
+    letter-spacing: 0.8px;
+}
+.team-block-list__subtitle {
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    font-weight: 400;
+}
+.team-block-list__social-list {
+    list-style: none;
+    margin-top: 35px;
+}
+.team-block-list__social-list li {
+    float: left;
+}
+.team-block-list__social-list li::after {
+    display: table;
+    clear: both;
+    content: '';
+}
+.team-block-list__social-item {
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    margin-right: 16px;
+    transition: background-color 0.4s ease;
+}
+.team-block-list__social-item:hover {
+    background-color: #ffffff;
+}
+.team-block-list__social-list li:last-child .team-block-list__social-item {
+    margin-right: 0;
+}
+.team-block-list__social-list li:first-child .team-block-list__social-item::after {
+    content: '';
+    z-index: 5;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: url("../img/sprites/facebook.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: background 0.4s ease;
+}
+.team-block-list__social-list li:first-child .team-block-list__social-item:hover::after {
+    background: url("../img/sprites/facebook_hover.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.team-block-list__social-list li:nth-child(2) .team-block-list__social-item::after {
+    content: '';
+    z-index: 5;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: url("../img/sprites/twitter.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: background 0.4s ease;
+}
+.team-block-list__social-list li:nth-child(2) .team-block-list__social-item:hover::after {
+    background: url("../img/sprites/twitter_hover.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.team-block-list__social-list li:nth-child(3) .team-block-list__social-item::after {
+    content: '';
+    z-index: 5;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../img/sprites/google-plus.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: background 0.4s ease;
+}
+.team-block-list__social-list li:nth-child(3) .team-block-list__social-item:hover::after {
+    background: url("../img/sprites/google-plus_hover.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.team-block-list__social-list li:nth-child(4) .team-block-list__social-item::after {
+    content: '';
+    z-index: 5;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../img/sprites/pinterest-logo.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: background 0.4s ease;
+}
+.team-block-list__social-list li:nth-child(4) .team-block-list__social-item:hover::after {
+    background: url("../img/sprites/pinterest-logo_hover.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 
 
-
-
-
-
+.Notvisible {
+    display: none;
+    visibility: hidden;
+}
