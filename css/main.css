@@ -1615,6 +1615,7 @@ body {
     width: 100%;
     list-style: none;
     padding-top: 60px;
+    padding-bottom: 107px;
 }
 .team-block-list:after {
     display: table;
@@ -1634,12 +1635,25 @@ body {
     width: 100%;
     height: auto;
 }
+.team-block-list__item::after {
+    position: absolute;
+    content: '';
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
 .team-block-list__item:last-child {
     margin-right: 0;
 }
 
 .team-block-list__hover-box {
     position: absolute;
+    z-index: 5;
     opacity: 0;
     top: 50%;
     left: 50%;
@@ -1653,6 +1667,9 @@ body {
 }
 .team-block-list__item:hover>.team-block-list__hover-box {
     opacity: 1;
+}
+.team-block-list__item:hover::after {
+    opacity: 0.2;
 }
 .team-block-list__name,
 .team-block-list__subtitle {
@@ -1773,10 +1790,185 @@ body {
     -webkit-background-size: cover;
     background-size: cover;
 }
-
-
-
 .Notvisible {
     display: none;
     visibility: hidden;
+}
+/*--------------------------------------------Блок "Почему мы"--------------------------------------------------------*/
+.layout--why {
+    height: 1000px;
+}
+.why-block-title {
+    font-size: 29px;
+}
+.why-list {
+    width: 50%;
+    list-style: none;
+    padding-top: 56px;
+    box-sizing: border-box;
+}
+.why-list__title {
+    display: block;
+    position: relative;
+    z-index: 5;
+    padding: 0 0 11px 68px;
+    color: #444444;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.65px;
+    text-decoration: none;
+    line-height: 57px;
+}
+.why-list__title::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    transition: background-color 0.4s ease;
+}
+.why-list__title:hover.why-list__title::after,
+.why-list__item--active>.why-list__title::after{
+    background-color: #ff7200;
+}
+.why-list__item:first-child>.why-list__title::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../img/sprites/like.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 24%;
+    left: 12px;
+    z-index: 5;
+    transition: background 0.4s ease;
+}
+
+.why-list__item:first-child>.why-list__title:hover::before,
+.why-list__item--active:first-child>.why-list__title::before{
+    background: url("../img/sprites/like_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.why-list__item:nth-child(2)>.why-list__title::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../img/sprites/edit.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 24%;
+    left: 12px;
+    z-index: 5;
+    transition: background 0.4s ease;
+}
+
+.why-list__item:nth-child(2)>.why-list__title:hover::before,
+.why-list__item--active:nth-child(2)>.why-list__title::before {
+    background: url("../img/sprites/edit_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.why-list__item:nth-child(3)>.why-list__title::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../img/sprites/umbrella.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 24%;
+    left: 12px;
+    z-index: 5;
+    transition: background 0.4s ease;
+}
+.why-list__item:nth-child(3)>.why-list__title:hover::before,
+.why-list__item--active:nth-child(3)>.why-list__title::before{
+    background: url("../img/sprites/umbrella_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.why-list__item:nth-child(4)>.why-list__title::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../img/sprites/medal.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 24%;
+    left: 12px;
+    z-index: 5;
+    transition: background 0.4s ease;
+}
+.why-list__item:nth-child(4)>.why-list__title:hover::before,
+.why-list__item--active:nth-child(4)>.why-list__title::before{
+    background: url("../img/sprites/medal_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.why-list__item:nth-child(5)>.why-list__title::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../img/sprites/tools.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    top: 24%;
+    left: 12px;
+    z-index: 5;
+    transition: background 0.4s ease;
+}
+.why-list__item:nth-child(5)>.why-list__title:hover::before,
+.why-list__item--active:nth-child(5)>.why-list__title::before{
+    background: url("../img/sprites/tools_hover.svg") ;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.why-list__decor {
+    position: relative;
+}
+
+.why-list__decor::before {
+    position: absolute;
+    z-index: 0;
+    content: '';
+    width: 36px;
+    height: 20px;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    transform: translate(-93%,-96%) rotate(67deg);
+}
+
+.why-list__decor::after {
+    position: absolute;
+    z-index: 0;
+    content: '';
+    width: 37px;
+    height: 20px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transform: translate(-97%,104%) rotate(-67deg);}
+
+.why-list__text {
+    display: none;
+    color: #787878;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    padding: 0 19px 38px 22px;
 }
