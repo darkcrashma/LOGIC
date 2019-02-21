@@ -5,14 +5,18 @@ $(document).ready( function() {
         slidesToShow: 1,
         slidesToScroll: 1,
     });
-
     $('.featured-work-slider').slick({
         arrows: false,
         dots: true,
         slidesToShow: 1,
         slidesToScroll: 1,
     });
-
+    $('.quotation-slider').slick({
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
 });
 
 $('.why-list__item--active').find('.why-list__text').slideDown();
