@@ -17,11 +17,14 @@ $(document).ready( function() {
         slidesToShow: 1,
         slidesToScroll: 1,
     });
+    mapAccordeon();
+    accordeon();
+
 });
 
-$('.why-list__item--active').find('.why-list__text').slideDown();
 
-function accordeon () {
+$('.why-list__item--active').find('.why-list__text').slideDown();
+function accordeon() {
     var $title = $('.why-list__title');
     var $cont = $('.why-list__text');
     var $clos = $('.why-list__item');
@@ -39,4 +42,15 @@ function accordeon () {
         $this.toggleClass(classActive);
     });
 }
-accordeon();
+
+function mapAccordeon() {
+    var $button = $('.map-btn');
+    var $map = $('.map-box');
+    $button.on('click', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        $this.toggleClass('map-btn--active');
+        $map.toggleClass('map-box--active');
+    });
+
+}
