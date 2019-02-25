@@ -2909,7 +2909,7 @@ body {
         position: fixed;
         text-align: center;
         width: 100vw;
-        height: calc(100vh+20px);
+        height: calc(100vh + 20px);
         background-color: #fff;
         z-index: 999;
         top: -5px;
