@@ -2673,6 +2673,9 @@ body {
     .team-block-list {
         padding-bottom: 60px;
     }
+    .gallery {
+        padding-top: 60px;
+    }
     .gallery-box1, .gallery-box2 {
         width: 80%;
         display: block;
@@ -2727,6 +2730,7 @@ body {
     .footer-list__site-item {
         width: 35%;
     }
+
 }
 @media all and (max-width: 767.9px) {
     .layout {
