@@ -20,6 +20,15 @@ $(document).ready( function() {
     mapAccordeon();
     accordeon();
 
+    $('.header__logo').on('click', function (e) {
+        e.preventDefault();
+        if ($(window).width() <= '768') {
+            $(this).toggleClass("logo--active");
+            $('.navigation-menu').toggleClass('navigation-menu--active');
+            $('body, html').toggleClass('overflowHidden');
+        }
+    });
+
 });
 
 
@@ -54,3 +63,37 @@ function mapAccordeon() {
     });
 
 }
+
+var tab = $(".advantages-list__item");
+var text = $('.advantages-text');
+
+tab.on('click', function (e) {
+    e.preventDefault();
+    var thisId = $(this).attr('data-tab');
+    if (!$(this).hasClass('advantages-list__item--active')) {
+        tab.removeClass('advantages-list__item--active');
+        text.removeClass('advantages-text--active');
+    }
+    $(this).addClass('advantages-list__item--active');
+    $(this).closest('.advantages-block').find('.advantages-text[data-tab= ' + thisId + ']').addClass('advantages-text--active');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

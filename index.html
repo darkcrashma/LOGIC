@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="lib/slick/slick.css">
     <link rel="stylesheet" href="css/main.css">
@@ -30,6 +30,7 @@
         </div>
     </header>
     <main>
+
         <div class="main-slider">
             <div class="main-slider__item">
                 <div class="layout layout--slider">
@@ -132,17 +133,39 @@
             <div class="layout">
                 <div class="advantages-block">
                     <ul class="advantages-list">
-                        <li class="advantages-list__item advantages-list__item--active"><a href="#" class="advantages-list__link">OUR MISSION</a></li>
-                        <li class="advantages-list__item"><a href="#" class="advantages-list__link">OUR GOAL</a></li>
-                        <li class="advantages-list__item"><a href="#" class="advantages-list__link">ACHIVEMENTS</a></li>
+                        <li data-tab="one" class="advantages-list__item advantages-list__item--active"><a href="#" class="advantages-list__link">OUR MISSION</a></li>
+                        <li data-tab="two" class="advantages-list__item"><a href="#" class="advantages-list__link">OUR GOAL</a></li>
+                        <li data-tab="three" class="advantages-list__item"><a href="#" class="advantages-list__link">ACHIVEMENTS</a></li>
                     </ul>
-                    <div class="advantages-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley type a scrambled it to make a type specimen book. It has survived not only five centuries,
-                    <ul class="advantages-checkboxes">
-                        <li class="advantages-checkboxes__item">We just want to love our client</li>
-                        <li class="advantages-checkboxes__item">We just want to love our client</li>
-                        <li class="advantages-checkboxes__item">We just want to love our client</li>
-                        <li class="advantages-checkboxes__item">We just want to love our client</li>
-                    </ul>
+                    <div  data-tab="one"  class="advantages-text advantages-text--active">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley type a scrambled it to make a type specimen book. It has survived not only five centuries,
+                        <div class="advantages-wrapper">
+                            <ul class="advantages-checkboxes">
+                                <li class="advantages-checkboxes__item">We just want to love our client</li>
+                                <li class="advantages-checkboxes__item">We just want to love our client</li>
+                                <li class="advantages-checkboxes__item">We just want to love our client</li>
+                                <li class="advantages-checkboxes__item">We just want to love our client</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div data-tab="two" class="advantages-text">Текст второго табаТекст второго табаТекст второго табаТекст второго табаТекст второго табаТекст второго табаТекст второго табаТекст второго табаТекст второго табаТекст второго табаТекст второго табаТекст второго табаТекст второго табаТекст второго табаТекст второго таба
+                        <div class="advantages-wrapper">
+                            <ul class="advantages-checkboxes">
+                                <li class="advantages-checkboxes__item">Текст второго таба</li>
+                                <li class="advantages-checkboxes__item">Текст второго таба</li>
+                                <li class="advantages-checkboxes__item">Текст второго таба</li>
+                                <li class="advantages-checkboxes__item">Текст второго таба</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div data-tab="three" class="advantages-text">Третий таб Третий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий табТретий таб
+                        <div class="advantages-wrapper">
+                            <ul class="advantages-checkboxes">
+                                <li class="advantages-checkboxes__item">Третий таб</li>
+                                <li class="advantages-checkboxes__item">Третий таб</li>
+                                <li class="advantages-checkboxes__item">Третий таб</li>
+                                <li class="advantages-checkboxes__item">Третий таб</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="statistic-block">
@@ -383,7 +406,7 @@
                     <form enctype="text/plain" action="#" class="message-form">
                         <input type="text" placeholder="First name" class="message-form__name">
                         <input type="text" placeholder="Last name" class="message-form__last-name">
-                        <input type="text" placeholder="E-mail" class="message-form__mail">
+                        <input type="email" placeholder="E-mail" class="message-form__mail">
                         <input type="text" placeholder="Subjects" class="message-form__subject">
                         <textarea name="message" class="message-form__text" placeholder="Your message" rows="9"></textarea>
                         <button class="orange-btn orange-btn--message">SEND MESSAGE</button>
