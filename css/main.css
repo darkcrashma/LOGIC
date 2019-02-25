@@ -2096,6 +2096,12 @@ body {
 .gallery-box2 {
     margin-left: 19px;
 }
+.gallery-box1:after,
+.gallery-box2:after{
+    display: table;
+    clear: both;
+    content: '';
+}
 
 /*--------------------------------------------Блок цитаток великих людей----------------------------------------------*/
 .layout--quotation {
@@ -2197,6 +2203,9 @@ body {
     position: relative;
     float: left;
     margin-right: 130px;
+}
+.brands-list__item a {
+    display: block;
 }
 
 .brands-list__item:last-child {
@@ -2697,7 +2706,167 @@ body {
     .footer-list__site-item {
         width: 35%;
     }
-
-
-
 }
+@media (max-width: 767.9px) {
+    .layout {
+        width: 450px;
+    }
+    .navigation-list__link {
+        padding: 0;
+    }
+
+    .main-slider__title {
+        font-size: 40px;
+        margin-top: 63%;
+    }
+    .main-slider__text {
+        line-height: 60px;
+    }
+    .service-tab {
+        width: 22%;
+    }
+    .service-tab::after {
+        transform: rotate(22deg) translate(-3%, 57%);
+    }
+    .service-tab::before {
+        width: 63%;
+    }
+    .services-description__item::after {
+        top: 20px;
+        right: 100px;
+        width: 208px;
+        height: 152px;
+    }
+    .services-description__wrapper {
+        width: 100%;
+    }
+    .featured-work-slider {
+        width: 100%;
+    }
+    .featured-work-text {
+        width: 100%;
+    }
+    .about-block {
+        padding-top: 50px;
+    }
+    .about-list {
+        width: 100%;
+    }
+    .about-block::after {
+        opacity: 0.3;
+    }
+    .advantages-list__link {
+        padding: 15px 25px 31px 25px;
+    }
+    .advantages-list__item:nth-child(2) .advantages-list__link {
+        padding: 15px 25px 31px 25px;
+    }
+    .advantages-checkboxes::after {
+        display: table;
+        clear: both;
+        content: '';
+    }
+    .advantages-checkboxes__item {
+        width: 46%;
+        margin-right: 18px;
+        font-size: 12px;
+    }
+    .progress-list__number {
+        font-size: 20px;
+    }
+    .progress-list__title {
+        font-size: 10px;
+    }
+
+    .progress-list__item:nth-child(2) {
+        padding-left: 0;
+    }
+
+    .progress-list__item {
+        width: 30%;
+    }
+     .progress-list__item {
+          margin: 0 10% 10% 10%;
+     }
+    .other-services-list__title {
+         line-height: normal;
+    }
+    .other-services-list__item {
+        width: 100%;
+    }
+    .other-services-list__title::before {
+        height: 41px;
+    }
+    .other-services-list__decorate::after {
+        width: 31px;
+        transform: translate(-108%,124%) rotate(-70deg);
+    }
+    .other-services-list__decorate::before {
+        transform: translate(-95%,-86%) rotate(70deg);
+    }
+    .team-block-list__item {
+        width: 100%;
+    }
+    .layout--why::after {
+        width: 123px;
+        height: 163px;
+    }
+    .gallery-list__item {
+        width: 50%;
+    }
+    .gallery-box1, .gallery-box2 {
+        width: 100%;
+    }
+    .gallery-box1__item:nth-child(2) {
+        width: 45%;
+    }
+    .gallery-box1__item:nth-child(3) {
+        width: 45%;
+    }
+    .gallery-box1__item:nth-child(4) {
+        width: 45%;
+        margin-top: 19px !important;
+    }
+    .gallery-box2__item:first-child {
+        width: 45%;
+    }
+    .gallery-box2__item:nth-child(2) {
+        width: 45%;
+        margin-left: 0;
+    }
+    .gallery-box2__item:nth-child(3) {
+        width: 45%;
+    }
+    .gallery-box2__item:nth-child(4) {
+        width: 45%;
+    }
+    .gallery-box2__item:nth-child(5) {
+        width: 45%;
+    }
+    .quotation-slider {
+        width: 350px;
+        top: 40%;
+    }
+    .layout--quotation::before {
+        top: 13%;
+    }
+    .brands-list__item {
+        margin-right: 15px;
+        margin-top: 20px;
+    }
+    .contacts-info {
+        width: 100%;
+    }
+    .message-block {
+        width: 100%;
+    }
+    .block-title--message {
+         margin-left: 0;
+    }
+    .message-form {
+        margin: 61px 0 0 0;
+    }
+    .footer-list__logo-box {
+        margin-bottom: 45px;
+    }
+    }
