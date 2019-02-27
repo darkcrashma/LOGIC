@@ -417,16 +417,16 @@ body {
 
 /*-----------------------------------------------Оформление навигационного меню---------------------------------------------*/
 .header {
-    position: absolute;
+    position: fixed;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 2;
+    z-index: 1000;
     width: 100% ;
+    background-color: rgba(0, 0, 0, 0.5);
  }
 .layout--header {
     padding-top: 53px;
 }
 .logo {
-    display: inline-block;
     float: left;
     color: #ff7200;;
     font-family: 'Montserrat', Arial, sans-serif;
@@ -522,6 +522,9 @@ body {
 /*-----------------------------------------------Оформление слайдера--------------------------------------------------*/
 .layout--slider {
     text-align: center;
+}
+.main-slider.slick-slider {
+    width: 100%;
 }
 .main-slider__item {
     display: block;
@@ -706,8 +709,8 @@ body {
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.service-tab--active.service-tab:nth-child(2)>.service-tab__title::before,
-.service-tab:hover.service-tab:nth-child(2)>.service-tab__title::before {
+.service-tab--active.service-tab:nth-child(2) .service-tab__title::before,
+.service-tab:hover.service-tab:nth-child(2) .service-tab__title::before {
     background: url("../img/sprites/creative_hover.svg") ;
     -webkit-background-size: cover;
     background-size: cover;
@@ -724,8 +727,8 @@ body {
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.service-tab--active.service-tab:nth-child(3)>.service-tab__title::before,
-.service-tab:hover.service-tab:nth-child(3)>.service-tab__title::before {
+.service-tab--active.service-tab:nth-child(3) .service-tab__title::before,
+.service-tab:hover.service-tab:nth-child(3) .service-tab__title::before {
     background: url("../img/sprites/startup_hover.svg") ;
     -webkit-background-size: cover;
     background-size: cover;
@@ -742,8 +745,8 @@ body {
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.service-tab--active.service-tab:last-child>.service-tab__title::before,
-.service-tab:hover.service-tab:last-child>.service-tab__title::before {
+.service-tab--active.service-tab:last-child .service-tab__title::before,
+.service-tab:hover.service-tab:last-child .service-tab__title::before {
     background: url("../img/sprites/puzzle_hover.svg") ;
     -webkit-background-size: cover;
     background-size: cover;
@@ -921,7 +924,7 @@ body {
 }
 
 
-.featured-work-slider>.slick-list.draggable {
+.featured-work-slider .slick-list.draggable {
     margin-bottom: 50px !important;
 }
 .featured-work-slider .slick-dots {
@@ -949,6 +952,7 @@ body {
 }
 .video-block iframe {
     width: 100%;
+    height: 500px;
 }
 /*-------------------------------Блок о компании---------------------------------------------------*/
 .about-block {
@@ -1190,7 +1194,7 @@ body {
 .advantages-list__item:hover {
     background-color: #eeeeee;
 }
-.advantages-list__item:hover>.advantages-list__link {
+.advantages-list__item:hover .advantages-list__link {
     color: #444444;
 }
 .advantages-list__item:hover.advantages-list__item::after,
@@ -1203,10 +1207,10 @@ body {
 .advantages-list__item--active:hover {
     background-color: #ff7200;
 }
-.advantages-list__item--active:hover>.advantages-list__link{
+.advantages-list__item--active:hover .advantages-list__link{
     color: #ffffff;
 }
-.advantages-list__item--active>.advantages-list__link{
+.advantages-list__item--active .advantages-list__link{
     color: #ffffff;
 }
 .advantages-list__item--active.advantages-list__item::after,
@@ -1367,6 +1371,7 @@ body {
     float: left;
     margin-right: 17%;
     box-sizing: border-box;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 .progress-list__item:last-child {
     margin-right: 0;
@@ -1375,7 +1380,6 @@ body {
     display: block;
     position: relative;
     color: #ffffff;
-    font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     font-size: 45px;
@@ -1396,16 +1400,16 @@ body {
 .progress-list__item:nth-child(2) {
     padding-left: 10px;
 }
-.progress-list__item:nth-child(2)>.progress-list__number::after{
+.progress-list__item:nth-child(2) .progress-list__number::after{
     background: url("../img/progress/cup.png") center no-repeat;
 }
 .progress-list__item:nth-child(3) {
     padding-left: 10px;
 }
-.progress-list__item:nth-child(3)>.progress-list__number::after {
+.progress-list__item:nth-child(3) .progress-list__number::after {
     background: url("../img/progress/social.png") center no-repeat;
 }
-.progress-list__item:nth-child(4)>.progress-list__number::after {
+.progress-list__item:nth-child(4) .progress-list__number::after {
     background: url("../img/progress/coffee.png") center no-repeat;
 }
 
@@ -1413,7 +1417,6 @@ body {
     font-size: 13px;
     display: block;
     color: #ffffff;
-    font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2.25px;
@@ -1472,7 +1475,7 @@ body {
     background-color: #ffffff;
     transition: background-color 0.4s ease;
 }
-.other-services-list__item:hover>.other-services-list__title::before {
+.other-services-list__item:hover .other-services-list__title::before {
     background-color: #ff7200;
 }
 .other-services-list__decorate {
@@ -1501,7 +1504,7 @@ body {
     left: 0;
     transform: translate(-80%,124%) rotate(-70deg);
 }
-.other-services-list__item:first-child>.other-services-list__title::after {
+.other-services-list__item:first-child .other-services-list__title::after {
     content: '';
     position: absolute;
     width: 30px;
@@ -1514,13 +1517,13 @@ body {
     z-index: 5;
     transition: background 0.4s ease;
 }
-.other-services-list__item:hover:first-child>.other-services-list__title::after {
+.other-services-list__item:hover:first-child .other-services-list__title::after {
     background: url("../img/sprites/flask_hover.svg") ;
     -webkit-background-size: cover;
     background-size: cover;
 }
 
-.other-services-list__item:nth-child(2)>.other-services-list__title::after {
+.other-services-list__item:nth-child(2) .other-services-list__title::after {
     content: '';
     position: absolute;
     width: 30px;
@@ -1533,12 +1536,12 @@ body {
     z-index: 5;
     transition: background 0.4s ease;
 }
-.other-services-list__item:hover:nth-child(2)>.other-services-list__title::after {
+.other-services-list__item:hover:nth-child(2) .other-services-list__title::after {
     background: url("../img/sprites/layers_hover.svg") ;
     -webkit-background-size: cover;
     background-size: cover;
 }
-.other-services-list__item:nth-child(3)>.other-services-list__title::after {
+.other-services-list__item:nth-child(3) .other-services-list__title::after {
     content: '';
     position: absolute;
     width: 30px;
@@ -1551,12 +1554,12 @@ body {
     z-index: 5;
     transition: background 0.4s ease;
 }
-.other-services-list__item:hover:nth-child(3)>.other-services-list__title::after {
+.other-services-list__item:hover:nth-child(3) .other-services-list__title::after {
     background: url("../img/sprites/video-camera_hover.svg") ;
     -webkit-background-size: cover;
     background-size: cover;
 }
-.other-services-list__item:nth-child(4)>.other-services-list__title::after {
+.other-services-list__item:nth-child(4) .other-services-list__title::after {
     content: '';
     position: absolute;
     width: 30px;
@@ -1569,12 +1572,12 @@ body {
     z-index: 5;
     transition: background 0.4s ease;
 }
-.other-services-list__item:hover:nth-child(4)>.other-services-list__title::after {
+.other-services-list__item:hover:nth-child(4) .other-services-list__title::after {
     background: url("../img/sprites/startup_hover.svg") ;
     -webkit-background-size: cover;
     background-size: cover;
 }
-.other-services-list__item:nth-child(5)>.other-services-list__title::after {
+.other-services-list__item:nth-child(5) .other-services-list__title::after {
     content: '';
     position: absolute;
     width: 30px;
@@ -1587,12 +1590,12 @@ body {
     z-index: 5;
     transition: background 0.4s ease;
 }
-.other-services-list__item:hover:nth-child(5)>.other-services-list__title::after {
+.other-services-list__item:hover:nth-child(5) .other-services-list__title::after {
     background: url("../img/sprites/photo-camera_hover.svg") ;
     -webkit-background-size: cover;
     background-size: cover;
 }
-.other-services-list__item:nth-child(6)>.other-services-list__title::after {
+.other-services-list__item:nth-child(6) .other-services-list__title::after {
     content: '';
     position: absolute;
     width: 30px;
@@ -1605,7 +1608,7 @@ body {
     z-index: 5;
     transition: background 0.4s ease;
 }
-.other-services-list__item:hover:nth-child(6)>.other-services-list__title::after {
+.other-services-list__item:hover:nth-child(6) .other-services-list__title::after {
     background: url("../img/sprites/file_hover.svg") ;
     -webkit-background-size: cover;
     background-size: cover;
@@ -1706,14 +1709,14 @@ body {
     letter-spacing: 0.35px;
     font-weight: 400;
 }
-.team-block-list__social-list {
+.team-block-list-social-list {
     list-style: none;
     margin-top: 35px;
 }
-.team-block-list__social-list li {
+.team-block-list-social-list li {
     float: left;
 }
-.team-block-list__social-list li::after {
+.team-block-list-social-list li::after {
     display: table;
     clear: both;
     content: '';
@@ -1730,10 +1733,10 @@ body {
 .team-block-list__social-item:hover {
     background-color: #ffffff;
 }
-.team-block-list__social-list li:last-child .team-block-list__social-item {
+.team-block-list-social-list li:last-child .team-block-list__social-item {
     margin-right: 0;
 }
-.team-block-list__social-list li:first-child .team-block-list__social-item::after {
+.team-block-list-social-list li:first-child .team-block-list__social-item::after {
     content: '';
     z-index: 5;
     position: absolute;
@@ -1747,12 +1750,12 @@ body {
     transform: translate(-50%,-50%);
     transition: background 0.4s ease;
 }
-.team-block-list__social-list li:first-child .team-block-list__social-item:hover::after {
+.team-block-list-social-list li:first-child .team-block-list__social-item:hover::after {
     background: url("../img/sprites/facebook_hover.svg");
     -webkit-background-size: cover;
     background-size: cover;
 }
-.team-block-list__social-list li:nth-child(2) .team-block-list__social-item::after {
+.team-block-list-social-list li:nth-child(2) .team-block-list__social-item::after {
     content: '';
     z-index: 5;
     position: absolute;
@@ -1766,12 +1769,12 @@ body {
     transform: translate(-50%,-50%);
     transition: background 0.4s ease;
 }
-.team-block-list__social-list li:nth-child(2) .team-block-list__social-item:hover::after {
+.team-block-list-social-list li:nth-child(2) .team-block-list__social-item:hover::after {
     background: url("../img/sprites/twitter_hover.svg");
     -webkit-background-size: cover;
     background-size: cover;
 }
-.team-block-list__social-list li:nth-child(3) .team-block-list__social-item::after {
+.team-block-list-social-list li:nth-child(3) .team-block-list__social-item::after {
     content: '';
     z-index: 5;
     position: absolute;
@@ -1785,12 +1788,12 @@ body {
     transform: translate(-50%,-50%);
     transition: background 0.4s ease;
 }
-.team-block-list__social-list li:nth-child(3) .team-block-list__social-item:hover::after {
+.team-block-list-social-list li:nth-child(3) .team-block-list__social-item:hover::after {
     background: url("../img/sprites/google-plus_hover.svg");
     -webkit-background-size: cover;
     background-size: cover;
 }
-.team-block-list__social-list li:nth-child(4) .team-block-list__social-item::after {
+.team-block-list-social-list li:nth-child(4) .team-block-list__social-item::after {
     content: '';
     z-index: 5;
     position: absolute;
@@ -1804,19 +1807,20 @@ body {
     transform: translate(-50%,-50%);
     transition: background 0.4s ease;
 }
-.team-block-list__social-list li:nth-child(4) .team-block-list__social-item:hover::after {
+.team-block-list-social-list li:nth-child(4) .team-block-list__social-item:hover::after {
     background: url("../img/sprites/pinterest-logo_hover.svg");
     -webkit-background-size: cover;
     background-size: cover;
 }
+
 .Notvisible {
-    display: none;
     visibility: hidden;
 }
 /*--------------------------------------------Блок "Почему мы"--------------------------------------------------------*/
 .layout--why {
     position: relative;
     max-height: 763px;
+    min-height: 655px;
 }
 .layout--why::after {
     content: '';
@@ -1882,8 +1886,8 @@ body {
     transition: background 0.4s ease;
 }
 
-.why-list__item:first-child>.why-list__title:hover::before,
-.why-list__item--active:first-child>.why-list__title::before{
+.why-list__item:first-child .why-list__title:hover::before,
+.why-list__item--active:first-child .why-list__title::before{
     background: url("../img/sprites/like_hover.svg") ;
     -webkit-background-size: cover;
     background-size: cover;
@@ -1903,13 +1907,13 @@ body {
     transition: background 0.4s ease;
 }
 
-.why-list__item:nth-child(2)>.why-list__title:hover::before,
-.why-list__item--active:nth-child(2)>.why-list__title::before {
+.why-list__item:nth-child(2) .why-list__title:hover::before,
+.why-list__item--active:nth-child(2) .why-list__title::before {
     background: url("../img/sprites/edit_hover.svg") ;
     -webkit-background-size: cover;
     background-size: cover;
 }
-.why-list__item:nth-child(3)>.why-list__title::before {
+.why-list__item:nth-child(3) .why-list__title::before {
     content: '';
     position: absolute;
     width: 20px;
@@ -1922,8 +1926,8 @@ body {
     z-index: 5;
     transition: background 0.4s ease;
 }
-.why-list__item:nth-child(3)>.why-list__title:hover::before,
-.why-list__item--active:nth-child(3)>.why-list__title::before{
+.why-list__item:nth-child(3) .why-list__title:hover::before,
+.why-list__item--active:nth-child(3) .why-list__title::before{
     background: url("../img/sprites/umbrella_hover.svg") ;
     -webkit-background-size: cover;
     background-size: cover;
@@ -1941,13 +1945,13 @@ body {
     z-index: 5;
     transition: background 0.4s ease;
 }
-.why-list__item:nth-child(4)>.why-list__title:hover::before,
-.why-list__item--active:nth-child(4)>.why-list__title::before{
+.why-list__item:nth-child(4) .why-list__title:hover::before,
+.why-list__item--active:nth-child(4) .why-list__title::before{
     background: url("../img/sprites/medal_hover.svg") ;
     -webkit-background-size: cover;
     background-size: cover;
 }
-.why-list__item:nth-child(5)>.why-list__title::before {
+.why-list__item:nth-child(5) .why-list__title::before {
     content: '';
     position: absolute;
     width: 20px;
@@ -1960,8 +1964,8 @@ body {
     z-index: 5;
     transition: background 0.4s ease;
 }
-.why-list__item:nth-child(5)>.why-list__title:hover::before,
-.why-list__item--active:nth-child(5)>.why-list__title::before{
+.why-list__item:nth-child(5) .why-list__title:hover::before,
+.why-list__item--active:nth-child(5) .why-list__title::before{
     background: url("../img/sprites/tools_hover.svg") ;
     -webkit-background-size: cover;
     background-size: cover;
@@ -2070,10 +2074,8 @@ body {
     text-transform: uppercase;
 }
 
-.gallery-list__item:hover::after {
-    transform: translate(0,0);
-}
-.gallery-list__item:hover>.gallery-list__link {
+
+.gallery-list__item:hover .gallery-list__link {
     color: #ff7200;
 }
 .gallery-list__item--active.gallery-list__item::after{
@@ -2087,11 +2089,17 @@ body {
     float: left;
     box-sizing: border-box;
     cursor: pointer;
+    transition: box-shadow .4s ease-in-out;
 }
 .gallery-box2__item {
     float: right;
     box-sizing: border-box;
     cursor: pointer;
+    transition: box-shadow .3s ease-in-out;
+}
+.gallery-box1__item:hover,
+.gallery-box2__item:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .gallery-box1__item img {
     width: 100%;
@@ -2490,7 +2498,8 @@ body {
     text-decoration: none;
 }
 .footer-list__email-link {
-    padding: 10px;
+    display: inline-block;
+    padding: 10px 70px 10px 20px;
     margin-top: 20px;
     position: relative;
     border: 1px solid  transparent;
@@ -2512,9 +2521,10 @@ body {
     background: url("../img/sprites/right-arrow.svg");
     -webkit-background-size: cover;
     background-size: cover;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, background .4s ease-in-out;
 }
 .footer-list__email-link:hover.footer-list__email-link::after {
+    background: url("../img/sprites/right-arrow-hover.svg");
     transform: translate(-100%, -50%);
 }
 .layout--footer-copy {
@@ -2523,7 +2533,7 @@ body {
 .footer-copy {
     background-color: #000000;
 }
-.footer-social-box__list {
+.footer-social-box-list {
     display: block;
     margin-top: 0;
     float: right;
